@@ -7,7 +7,7 @@ import (
 func main() {
 
 	controllers.GreetUser()
-	controllers.IntialBoard()
+	controllers.IntialBoard(0, 0)
 	controllers.InstructUser()
 
 	// var i int
