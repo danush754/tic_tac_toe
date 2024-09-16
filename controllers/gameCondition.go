@@ -9,7 +9,7 @@ func ValidatehumanVal(gamePositions []string, humanVal int) bool {
 
 	fmt.Println("arr", gamePositions[humanVal-1])
 
-	if strings.Contains(gamePositions[humanVal], "X") || strings.Contains(gamePositions[humanVal], "O") {
+	if strings.Contains(gamePositions[humanVal-1], "X") || strings.Contains(gamePositions[humanVal-1], "O") {
 		return true
 	}
 
@@ -18,7 +18,7 @@ func ValidatehumanVal(gamePositions []string, humanVal int) bool {
 
 func ValidatecompVal(gamePositions []string, compval int) bool {
 
-	if strings.Contains(gamePositions[compval], "X") || strings.Contains(gamePositions[compval], "O") {
+	if strings.Contains(gamePositions[compval-1], "X") || strings.Contains(gamePositions[compval-1], "O") {
 		return true
 	}
 

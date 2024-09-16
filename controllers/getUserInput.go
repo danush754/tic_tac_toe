@@ -5,7 +5,7 @@ import (
 	"math/rand"
 )
 
-// var gamePositions = []string{}
+var PositionArr = []string{"1", "2", "3", "4", "5", "6", "7", "8", "9"}
 
 func GetUserInput() {
 
@@ -14,7 +14,13 @@ func GetUserInput() {
 	fmt.Scan(&userPosition)
 	fmt.Println("")
 
-	GameBoard(userPosition, 0)
+	isAlreadyGvnHumanInput := ValidatehumanVal(PositionArr, userPosition)
+
+	if isAlreadyGvnHumanInput {
+		GetUserInput()
+	} else {
+		GameBoard(userPosition, 0)
+	}
 
 }
 
@@ -22,9 +28,10 @@ func GenerateCompInput() {
 
 	randomVal := rand.Intn(10)
 
-	fmt.Printf("Computer has chosen the position: %d", randomVal)
+	isAlreadyGvnCompInput := ValidatecompVal(PositionArr, randomVal)
 
-	if randomVal != 0 {
+	if randomVal != 0 && !isAlreadyGvnCompInput {
+		fmt.Printf("Computer has chosen the position: %d", randomVal)
 		GameBoard(0, randomVal)
 	} else {
 		GenerateCompInput()

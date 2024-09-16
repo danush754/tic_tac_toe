@@ -7,6 +7,14 @@ func main() {
 	controllers.GreetUser()
 	controllers.IntialBoard()
 	controllers.InstructUser()
-	controllers.GetUserInput()
-	controllers.GenerateCompInput()
+
+	for {
+		controllers.GetUserInput()
+		controllers.GenerateCompInput()
+		if controllers.ValidateUserWin(controllers.PositionArr) || controllers.ValidateCompWin(controllers.PositionArr) {
+			break
+		}
+
+	}
+
 }
