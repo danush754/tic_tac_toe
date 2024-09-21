@@ -3,7 +3,7 @@ package controllers
 import "fmt"
 
 func ValidateUserWin(PositionArr []string) bool {
-	if (PositionArr[0] == "X" && PositionArr[1] == "X" && PositionArr[2] == "X") || (PositionArr[3] == "X" && PositionArr[4] == "X" && PositionArr[5] == "X") || (PositionArr[6] == "X" && PositionArr[7] == "X" && PositionArr[8] == "X") || (PositionArr[0] == "X" && PositionArr[3] == "X" && PositionArr[6] == "X") || (PositionArr[1] == "X" && PositionArr[4] == "X" && PositionArr[8] == "X") || (PositionArr[2] == "X" && PositionArr[5] == "X" && PositionArr[8] == "X") || (PositionArr[2] == "X" && PositionArr[4] == "X" && PositionArr[6] == "X") || (PositionArr[0] == "X" && PositionArr[4] == "X" && PositionArr[8] == "X") {
+	if (PositionArr[0] == "X" && PositionArr[1] == "X" && PositionArr[2] == "X") || (PositionArr[3] == "X" && PositionArr[4] == "X" && PositionArr[5] == "X") || (PositionArr[6] == "X" && PositionArr[7] == "X" && PositionArr[8] == "X") || (PositionArr[0] == "X" && PositionArr[3] == "X" && PositionArr[6] == "X") || (PositionArr[1] == "X" && PositionArr[4] == "X" && PositionArr[7] == "X") || (PositionArr[2] == "X" && PositionArr[5] == "X" && PositionArr[8] == "X") || (PositionArr[2] == "X" && PositionArr[4] == "X" && PositionArr[6] == "X") || (PositionArr[0] == "X" && PositionArr[4] == "X" && PositionArr[8] == "X") {
 		fmt.Println("********************You have won the match********************")
 		return true
 	}

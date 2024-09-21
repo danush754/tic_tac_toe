@@ -10,8 +10,11 @@ func main() {
 
 	for {
 		controllers.GetUserInput()
+		if controllers.ValidateUserWin(controllers.PositionArr) {
+			break
+		}
 		controllers.GenerateCompInput()
-		if controllers.ValidateUserWin(controllers.PositionArr) || controllers.ValidateCompWin(controllers.PositionArr) {
+		if controllers.ValidateCompWin(controllers.PositionArr) {
 			break
 		}
 
